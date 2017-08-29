@@ -1,4 +1,4 @@
-# SimpleSignin
+SimpleSignin
 
 This is a work in progress project.
 
