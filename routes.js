@@ -1,19 +1,11 @@
 'use strict';
 
-var index = require('./handlers/index'),
-    signin = require('./handlers/signin');
+const index = require('./routes/index-route'),
+    signin = require('./routes/signin-route');
 
 module.exports.registerRoutes = (server) => {
 
-    server.route({
-        method: 'GET',
-        path: '/',
-        handler: index
-    });
-    server.route({
-        method: 'GET',
-        path: '/signin',
-        handler: signin
-    });
+    index.route(server);
+    signin.route(server);
 
 };
