@@ -6,7 +6,23 @@ const Good = require('good');
 const server = new Hapi.Server();
 server.connection({ port: 3000, host: 'localhost' });
 
-require('./routes').registerRoutes(server);
+server.register(require('vision'), (err) => {
+
+    if (err) {
+        throw err;
+    }
+
+    server.views({
+       engines: {
+           html: require('handlebars')
+       },
+        relativeTo: __dirname,
+        path: 'pages'
+    });
+
+    require('./routes').registerRoutes(server);
+
+});
 
 server.register ( {
     register: Good,
