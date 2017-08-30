@@ -4,12 +4,16 @@ This is a work in progress project.
 
 Goal: Create a simple sign in application.
 
-1. The sign in page will be the landing page
+1. Landing page ('/') has a link to the signin page ('/signin')
 
-2. Can create a user (Users will be stored in database)
+2. Signin page can create a user (Users will be stored in database)
 
-3. Recover password feature (Asks a security question to recover username/password)
+3. Signin page has recover password feature (Asks a security question to recover username/password)
 
-4. Existing users should be able to login
+4. Signin page allows existing users should be able to login
 
-5. Successful login takes users to the home page
+5. Successful login takes users to the Home page ('/home')
+
+To Run:
+
+From project root directory type: npm start
