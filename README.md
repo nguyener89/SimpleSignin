@@ -16,4 +16,10 @@ Goal: Create a simple sign in application.
 
 To Run:
 
-From project root directory type: npm start
+1. Open console
+
+2. Navigate to root directory of project (path/to/directory/SimpleSignin)
+
+3. npm install // installs node modules for project, must have node and npm
+
+4. npm start // runs the app - localhost:3000 is the index page
