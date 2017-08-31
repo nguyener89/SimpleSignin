@@ -5,7 +5,7 @@
   "author": "Michael Nguyen <nguyener89@gmail.com>",
   "main": "app.js",
   "scripts": {
-    "start": "nodejs app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "good": "^7.3.0",
