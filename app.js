@@ -18,7 +18,7 @@ server.register(require('vision'), (err) => {
        },
         relativeTo: __dirname,
         path: './templates',
-        // partialsPath: './templates/partials',
+        partialsPath: './templates/partials',
         // helpersPath: './templates/helpers',
         layoutPath: './templates',
         layout: 'default'

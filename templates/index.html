@@ -1,9 +1,15 @@
-<div>
+{{>header}}
 
-    <h2>This is my index page.</h2>
-
-    <form method="get" action="/signin">
-        <button type="submit">Continue</button>
-    </form>
-
+<div class="splash-container">
+    <div class="splash">
+        <h1 class="splash-head">Simple Signin</h1>
+        <p class="splash-subhead">
+            This is my signin application
+        </p>
+        <p>
+            <a href="/signin" class="pure-button pure-button-primary">Get Started</a>
+        </p>
+    </div>
 </div>
+
+{{>footer}}

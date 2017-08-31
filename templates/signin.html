@@ -1,13 +1,21 @@
-<div>
 
-    <h2>This is my login page.</h2>
+{{>header}}
+<div class="splash-container">
+            <div class="pure-g">
+              <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
 
-    <form>
-        <ul>
-            <li>Username: <input title="Username" type="text" name="Username"></li>
-            <li>Password: <input title="Password" type="text" name="Password"></li>
-            <button type="submit">Login</button>
-        </ul>
-    </form>
+                        <label for="name">Username</label>
+                        <input id="name" type="text" placeholder="Username">
 
+                        <label for="password">Password</label>
+                        <input id="password" type="password" placeholder="Your Password">
+
+                        <button type="submit" class="pure-button">Signin</button>
+                    </fieldset>
+                </form>
+              </div>
+            </div>
 </div>
+{{>footer}}
