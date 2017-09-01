@@ -4,7 +4,7 @@ const Hapi = require('hapi');
 const Good = require('good');
 
 const server = new Hapi.Server();
-server.connection({ port: 3000, host: 'localhost' });
+server.connection({port: 3000, host: 'localhost'});
 
 server.register(require('vision'), (err) => {
 
@@ -13,22 +13,22 @@ server.register(require('vision'), (err) => {
     }
 
     server.views({
-       engines: {
-           html: require('handlebars')
-       },
+        engines: {
+            html: require('handlebars')
+        },
         relativeTo: __dirname,
-        path: './templates',
-        partialsPath: './templates/partials',
+        path: './views',
+        partialsPath: './views/partials',
         // helpersPath: './templates/helpers',
-        layoutPath: './templates',
+        layoutPath: './views',
         layout: 'default'
     });
 
-    require('./routes').registerRoutes(server);
+    require('./controllers/controller').registerRoutes(server);
 
 });
 
-server.register ( {
+server.register({
     register: Good,
     options: {
         reporters: {
@@ -50,7 +50,7 @@ server.register ( {
         throw err; // something bad happened loading the plugin
     }
 
-    server.start ((err) => {
+    server.start((err) => {
 
         if (err) {
             throw err;
