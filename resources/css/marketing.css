@@ -24,6 +24,10 @@ label {
     color: #34495e;
 }
 
+span.blue{
+    color: blue;
+}
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
@@ -69,7 +73,7 @@ label {
  * I want my pure-button elements to look a little different
  */
 .pure-button {
-    background-color: #1f8dd6;
+    background-color: #2d3e50;
     color: white;
     padding: 0.5em 2em;
     border-radius: 5px;
