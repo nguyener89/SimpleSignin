@@ -2,6 +2,11 @@
 
 var AWS = require('aws-sdk');
 
+AWS.config.update({
+   region: "us-east-2",
+    endpoint: "https://dynamodb.us-east-2.amazonaws.com"
+});
+
 var dynamoAccess = new AWS.DynamoDB();
 
 module.exports.CreateAccount = (email, user, password, question, answer) => {
