@@ -7,7 +7,7 @@ Goal: Create a simple sign in application.
 1. Landing page ('/') has a link to the signin page ('/signin')
 
 2. Signin page can create a user (Users will be stored in database)
-   Note: Currently exploring MongoDB Stitch as a database...might switch to something else
+   Note: Going with aws dynamodb
 
 3. Signin page has recover password feature (Asks a security question to recover username/password)
 

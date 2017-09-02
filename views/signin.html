@@ -1,27 +1,33 @@
-<div class="pure-g">
-    <div class="l-box-lrg pure-u-1">
+{{>background}}
+<div class="content-wrapper">
+    <div class="content">
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1">
 
-        <form class="pure-form pure-form-stacked">
+                <form class="pure-form pure-form-stacked">
 
-            <fieldset>
+                    <fieldset>
 
-                <label for="name">Username</label>
-                <input id="name" type="text" placeholder="Username">
+                        <label for="name">Username</label>
+                        <input id="name" type="text" placeholder="Username">
 
-                <label for="password">Password</label>
-                <input id="password" type="password" placeholder="Your Password">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" placeholder="Your Password">
 
-                <button type="submit" class="pure-button">Signin</button>
+                        <button type="submit" class="pure-button">Signin</button>
 
-            </fieldset>
+                    </fieldset>
 
-        </form>
+                </form>
 
-        <p>
-            <a href="/createaccount">Create Account</a>
-            <span class="blue">/</span>
-            <a href="/forgotpassword">Forgot Password</a>
-        </p>
+                <p>
+                    <a href="/createaccount">Create Account</a>
+                    <span class="blue">/</span>
+                    <a href="/forgotpassword">Forgot Password</a>
+                </p>
 
+            </div>
+        </div>
     </div>
+    {{>footer}}
 </div>
