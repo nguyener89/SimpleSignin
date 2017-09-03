@@ -15,7 +15,7 @@ module.exports = (request, response) => {
     });
 
     if (request.method === 'post') {
-        Joi.validate(request.payload, schema, (err, val) => {
+        Joi.validate(request.payload, schema, (err) => {
         if (err) return response(Boom.badRequest(err));
 
         CreateAccount.CreateAccount(request.payload.email, request.payload.username, request.payload.password,
