@@ -39,8 +39,8 @@ module.exports.CreateAccount = (email, user, password, question, answer) => {
         else console.log(data);
     });
 };
-
-module.exports.GetEmail = (email) => {
+//need a callback
+module.exports.GetEmail = (email, callback) => {
     var params = {
         Key: {
             "email": {
@@ -51,8 +51,12 @@ module.exports.GetEmail = (email) => {
     };
     dynamoAccess.getItem(params, function(err, data) {
         if (err) {
-            throw Boom.serverUnavailable(err);
+            callback(err);
         }
-        else return data;
+        else {
+            console.log(data);
+            callback(data);
+        }
     });
+
 };
