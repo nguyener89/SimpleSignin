@@ -10,7 +10,7 @@ AWS.config.update({
 
 var dynamoAccess = new AWS.DynamoDB();
 
-module.exports.CreateAccount = (email, user, password, question, answer) => {
+module.exports.CreateAccount = (email, user, password, question, answer, callback) => {
     var params = {
         Item: {
             "email": {
@@ -36,7 +36,10 @@ module.exports.CreateAccount = (email, user, password, question, answer) => {
         if (err) {
             throw Boom.serverUnavailable(err);
         }
-        else console.log(data);
+        else {
+            console.log(data);
+            callback(data);
+        }
     });
 };
 //need a callback

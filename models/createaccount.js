@@ -21,16 +21,37 @@ function CheckIfEmailIsAvailable (email, callback) {
 
 
 module.exports.CreateAccount = (email, username, password, question, answer, callback) => {
-    CheckIfEmailIsAvailable(email, function (response) {
-        if (response) {
-            persistence.CreateAccount(email, username, password, question, answer);
-            console.log('truecreate');
+    // CheckIfEmailIsAvailable(email, function (response) {
+    //     if (response) {
+            persistence.CreateAccount(email, username, password, question, answer, function (res) {
+                if (res) {
+                    console.log("create account: " + res);
+                    callback(true);
+                }
+                else {
+                    console.log("account not created: " + res);
+                    callback(false);
+                }
+            });
+    //         console.log('truecreate');
+    //         callback(true);
+    //     } else {
+    //         console.log('falsecreate');
+    //         callback(false);
+    //     }
+    // });
+
+
+};
+
+module.exports.IsEmailAvailable = (email, callback) => {
+    CheckIfEmailIsAvailable(email, function (res) {
+        if(res) {
+            console.log('Email available');
             callback(true);
         } else {
-            console.log('falsecreate');
+            console.log('Email not available');
             callback(false);
         }
     });
-
-
 };

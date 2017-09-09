@@ -17,15 +17,25 @@ module.exports = (request, response) => {
     if (request.method === 'post') {
         Joi.validate(request.payload, schema, (err) => {
             if (err) return response(Boom.badRequest(err));
+            var email = request.payload.email, username = request.payload.username,
+                password = request.payload.password, question = request.payload.question,
+                answer = request.payload.answer;
 
-            CreateAccount.CreateAccount(request.payload.email, request.payload.username, request.payload.password,
-                request.payload.question, request.payload.answer, function (res) {
-                    if (res) {
-                        return response.redirect('/signin');
-                    } else {
-                        return response(Boom.serverUnavailable(err));
-                    }
-                });
+            CreateAccount.IsEmailAvailable(email, function (res) {
+                if(res) {
+                    CreateAccount.CreateAccount(email, username, password,
+                        question, answer, function (resp) {
+                            if (resp) {
+                                return response.redirect('/signin');
+                            } else {
+                                return response(Boom.serverUnavailable(err));
+                            }
+                        });
+                } else {
+                    response("Email already taken");
+                }
+            });
+
 
         });
 
