@@ -28,7 +28,11 @@ module.exports.SignIn = (email, password, callback) => {
             console.log('Email correct');
             if (res === password) {
                 console.log('Email and password correct');
-                callback(true);
+                var user = {
+                    email: email,
+                    password: password
+                };
+                callback(user);
 
             }
             else {

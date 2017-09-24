@@ -7,6 +7,9 @@ module.exports.route = (server) => {
     server.route({
         method: 'GET',
         path: '/',
-        handler: index
+        config: {
+            auth: false,
+            handler: index
+        }
     });
 };

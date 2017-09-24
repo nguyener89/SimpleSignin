@@ -7,7 +7,10 @@ module.exports.route = (server) => {
     server.route({
         method: ['GET'],
         path: '/emailtaken',
-        handler: emailtaken
+        config: {
+            auth: false,
+            handler: emailtaken
+        }
     });
 
 };

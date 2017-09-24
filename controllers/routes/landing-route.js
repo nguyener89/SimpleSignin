@@ -7,7 +7,12 @@ module.exports.route = (server) => {
     server.route({
         method: 'GET',
         path: '/landing',
-        handler: landing
+        config: {
+            auth: {
+                strategy: 'base'
+            },
+            handler: landing
+        }
     });
 
 };

@@ -7,7 +7,10 @@ module.exports.route = (server) => {
     server.route({
         method: 'GET',
         path: '/signinfailed',
-        handler: signinfailed
+        config: {
+            auth: false,
+            handler: signinfailed
+        }
     });
 
 };

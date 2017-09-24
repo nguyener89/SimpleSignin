@@ -18,8 +18,11 @@ Goal: Create a simple sign in application.
 Optional:
 
 1. Find a way to prevent users from getting to pages without logging in
+   Note: find out about different authentication and authorization practices
 
-2. Make code look pretty
+2. Find better way of doing logs
+
+3. Make code look pretty
 
 To Run:
 

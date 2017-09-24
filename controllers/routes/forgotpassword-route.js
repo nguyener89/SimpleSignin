@@ -7,7 +7,10 @@ module.exports.route = (server) => {
     server.route({
         method: 'GET',
         path: '/forgotpassword',
-        handler: forgotpassword
+        config: {
+            auth: false,
+            handler: forgotpassword
+        }
     });
 
 };

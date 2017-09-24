@@ -10,11 +10,15 @@ module.exports.route = (server) => {
     server.route({
         method: 'GET',
         path: '/resources/{param*}',
-        handler: {
-            directory: {
-                path: 'resources',
+        config: {
+            auth: false,
+            handler: {
+                directory: {
+                    path: 'resources',
+                }
             }
         }
+
     });
 
 };

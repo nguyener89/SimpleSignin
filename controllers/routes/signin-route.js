@@ -7,7 +7,10 @@ module.exports.route = (server) => {
     server.route({
         method: ['GET', 'POST'],
         path: '/signin',
-        handler: signin
+        config: {
+            auth: false,
+            handler: signin
+        }
     });
 
 };

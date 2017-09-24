@@ -7,7 +7,10 @@ module.exports.route = (server) => {
     server.route({
         method: ['GET'],
         path: '/accountcreated',
-        handler: accountcreated
+        config: {
+            auth: false,
+            handler: accountcreated
+        }
     });
 
 };
