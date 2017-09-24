@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = (request, response) => {
-    response.view('signin');
+    response.view('signin', null, { layout: 'default' });
 };

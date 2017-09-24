@@ -15,6 +15,10 @@ Goal: Create a simple sign in application.
 
 5. Successful login takes users to the Home page ('/home')
 
+Optional:
+
+1. Find a way to prevent users from getting to pages without logging in
+
 To Run:
 
 1. Open console

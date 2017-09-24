@@ -20,8 +20,8 @@ server.register(require('vision'), (err) => {
         path: './views',
         partialsPath: './views/partials',
         // helpersPath: './templates/helpers',
-        layoutPath: './views',
-        layout: 'default'
+        layoutPath: './views/layouts'
+        // layout: 'default'
     });
 
     require('./controllers/controller').registerRoutes(server);

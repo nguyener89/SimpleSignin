@@ -26,13 +26,13 @@ module.exports = (request, response) => {
                     CreateAccount.CreateAccount(email, username, password,
                         question, answer, function (resp) {
                             if (resp) {
-                                return response.redirect('/signin');
+                                return response.redirect('/accountcreated');
                             } else {
                                 return response(Boom.serverUnavailable(err));
                             }
                         });
                 } else {
-                    response("Email already taken");
+                    return response.redirect('/emailtaken');
                 }
             });
 
@@ -41,7 +41,7 @@ module.exports = (request, response) => {
 
     }
     else {
-        return response.view('createaccount');
+        return response.view('createaccount', null, { layout: 'default' });
     }
 
 };
