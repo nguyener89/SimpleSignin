@@ -5,7 +5,7 @@ const signin = require('../handlers/signin-handle');
 module.exports.route = (server) => {
 
     server.route({
-        method: 'GET',
+        method: ['GET', 'POST'],
         path: '/signin',
         handler: signin
     });

@@ -6,6 +6,7 @@ const index = require('./routes/index-route'),
     forgotpassword = require('./routes/forgotpassword-route'),
     emailtaken = require('./routes/emailtaken-route'),
     accountcreated = require('./routes/accountcreated-route'),
+    landing = require('./routes/landing-route'),
     css = require('./routes/css-route');
 
 module.exports.registerRoutes = (server) => {
@@ -17,5 +18,6 @@ module.exports.registerRoutes = (server) => {
     forgotpassword.route(server);
     emailtaken.route(server);
     accountcreated.route(server);
+    landing.route(server);
 
 };

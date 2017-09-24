@@ -2,7 +2,7 @@
 
 const Joi = require('joi'),
     Boom = require('boom'),
-    CreateAccount = require('../../models/createaccount');
+    CreateAccount = require('../../models/createaccount-model');
 
 module.exports = (request, response) => {
 

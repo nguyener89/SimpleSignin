@@ -19,6 +19,8 @@ Optional:
 
 1. Find a way to prevent users from getting to pages without logging in
 
+2. Make code look pretty
+
 To Run:
 
 1. Open console
